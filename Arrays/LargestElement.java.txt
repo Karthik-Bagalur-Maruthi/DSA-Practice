@@ -1,0 +1,22 @@
+//Leetcode : Largest Element at least twice of others
+//TC : O(n)
+//SC : O(1)
+
+
+class Solution {
+    public int dominantIndex(int[] nums) {
+        int largest = 0;
+        for(int i = 0 ; i<nums.length ; i++){
+            if(nums[i]>nums[largest]){
+                largest = i;
+            }
+        }
+
+        for(int i = 0 ; i<nums.length ; i++){
+            if(i!=largest && nums[largest] < 2*nums[i]){
+                return -1;
+            }
+        }
+        return largest;
+    }
+}

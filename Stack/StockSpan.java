@@ -3,8 +3,8 @@
 //SC : O(n)
 
 import java.util.Stack;
-public class JavaBasics{
-  public static void stockSpan(int price[] , int span[]){
+public class StockSpan{
+  public static void stockSpanproblem(int price[] , int span[]){
     Stack<Integer> s = new Stack<>();
     span[0] = 1;
     s.push(0);
